@@ -1,0 +1,501 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		140DB22B1907328E007C772F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB22A1907328E007C772F /* Foundation.framework */; };
+		140DB22D1907328E007C772F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB22C1907328E007C772F /* CoreGraphics.framework */; };
+		140DB22F1907328E007C772F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB22E1907328E007C772F /* UIKit.framework */; };
+		140DB2351907328E007C772F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 140DB2331907328E007C772F /* InfoPlist.strings */; };
+		140DB2371907328E007C772F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 140DB2361907328E007C772F /* main.m */; };
+		140DB23B1907328E007C772F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 140DB23A1907328E007C772F /* AppDelegate.m */; };
+		140DB23D1907328E007C772F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 140DB23C1907328E007C772F /* Images.xcassets */; };
+		140DB2441907328E007C772F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB2431907328E007C772F /* XCTest.framework */; };
+		140DB2451907328E007C772F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB22A1907328E007C772F /* Foundation.framework */; };
+		140DB2461907328E007C772F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 140DB22E1907328E007C772F /* UIKit.framework */; };
+		140DB25E190736AC007C772F /* SignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140DB25C190736AC007C772F /* SignInViewController.m */; };
+		140DB25F190736AC007C772F /* SignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140DB25D190736AC007C772F /* SignInViewController.xib */; };
+		140DB26919075E61007C772F /* SuccessViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 140DB26719075E61007C772F /* SuccessViewController.m */; };
+		140DB26A19075E61007C772F /* SuccessViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 140DB26819075E61007C772F /* SuccessViewController.xib */; };
+		34C799BC62B544DD9E1D5763 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 638A2EA0435A4FEBA94B8F06 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		140DB2471907328E007C772F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 140DB21F1907328E007C772F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 140DB2261907328E007C772F;
+			remoteInfo = "Reactive Cocoa Primer";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		140DB2271907328E007C772F /* Reactive Cocoa Primer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Reactive Cocoa Primer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		140DB22A1907328E007C772F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		140DB22C1907328E007C772F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		140DB22E1907328E007C772F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		140DB2321907328E007C772F /* Reactive Cocoa Primer-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Reactive Cocoa Primer-Info.plist"; sourceTree = "<group>"; };
+		140DB2341907328E007C772F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		140DB2361907328E007C772F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		140DB2381907328E007C772F /* Reactive Cocoa Primer-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Reactive Cocoa Primer-Prefix.pch"; sourceTree = "<group>"; };
+		140DB2391907328E007C772F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		140DB23A1907328E007C772F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		140DB23C1907328E007C772F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		140DB2421907328E007C772F /* Reactive Cocoa PrimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Reactive Cocoa PrimerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		140DB2431907328E007C772F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		140DB25B190736AC007C772F /* SignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SignInViewController.h; path = "Classes/User Interface/SignInViewController.h"; sourceTree = "<group>"; };
+		140DB25C190736AC007C772F /* SignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SignInViewController.m; path = "Classes/User Interface/SignInViewController.m"; sourceTree = "<group>"; };
+		140DB25D190736AC007C772F /* SignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SignInViewController.xib; path = "Classes/User Interface/SignInViewController.xib"; sourceTree = "<group>"; };
+		140DB26619075E61007C772F /* SuccessViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SuccessViewController.h; path = "Classes/User Interface/SuccessViewController.h"; sourceTree = "<group>"; };
+		140DB26719075E61007C772F /* SuccessViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SuccessViewController.m; path = "Classes/User Interface/SuccessViewController.m"; sourceTree = "<group>"; };
+		140DB26819075E61007C772F /* SuccessViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = SuccessViewController.xib; path = "Classes/User Interface/SuccessViewController.xib"; sourceTree = "<group>"; };
+		3581176053CB4715A9B04676 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		638A2EA0435A4FEBA94B8F06 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		140DB2241907328E007C772F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140DB22D1907328E007C772F /* CoreGraphics.framework in Frameworks */,
+				140DB22F1907328E007C772F /* UIKit.framework in Frameworks */,
+				140DB22B1907328E007C772F /* Foundation.framework in Frameworks */,
+				34C799BC62B544DD9E1D5763 /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		140DB23F1907328E007C772F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140DB2441907328E007C772F /* XCTest.framework in Frameworks */,
+				140DB2461907328E007C772F /* UIKit.framework in Frameworks */,
+				140DB2451907328E007C772F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		140DB21E1907328E007C772F = {
+			isa = PBXGroup;
+			children = (
+				140DB2301907328E007C772F /* Application */,
+				140DB2291907328E007C772F /* Frameworks */,
+				140DB2281907328E007C772F /* Products */,
+				3581176053CB4715A9B04676 /* Pods.xcconfig */,
+			);
+			sourceTree = "<group>";
+		};
+		140DB2281907328E007C772F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				140DB2271907328E007C772F /* Reactive Cocoa Primer.app */,
+				140DB2421907328E007C772F /* Reactive Cocoa PrimerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		140DB2291907328E007C772F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				140DB22A1907328E007C772F /* Foundation.framework */,
+				140DB22C1907328E007C772F /* CoreGraphics.framework */,
+				140DB22E1907328E007C772F /* UIKit.framework */,
+				140DB2431907328E007C772F /* XCTest.framework */,
+				638A2EA0435A4FEBA94B8F06 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		140DB2301907328E007C772F /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				140DB2591907361D007C772F /* Classes */,
+				140DB2391907328E007C772F /* AppDelegate.h */,
+				140DB23A1907328E007C772F /* AppDelegate.m */,
+				140DB23C1907328E007C772F /* Images.xcassets */,
+				140DB2311907328E007C772F /* Supporting Files */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		140DB2311907328E007C772F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				140DB2321907328E007C772F /* Reactive Cocoa Primer-Info.plist */,
+				140DB2331907328E007C772F /* InfoPlist.strings */,
+				140DB2361907328E007C772F /* main.m */,
+				140DB2381907328E007C772F /* Reactive Cocoa Primer-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		140DB2591907361D007C772F /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				140DB25A1907362E007C772F /* User Interface */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		140DB25A1907362E007C772F /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				140DB25B190736AC007C772F /* SignInViewController.h */,
+				140DB25C190736AC007C772F /* SignInViewController.m */,
+				140DB25D190736AC007C772F /* SignInViewController.xib */,
+				140DB26619075E61007C772F /* SuccessViewController.h */,
+				140DB26719075E61007C772F /* SuccessViewController.m */,
+				140DB26819075E61007C772F /* SuccessViewController.xib */,
+			);
+			name = "User Interface";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		140DB2261907328E007C772F /* Reactive Cocoa Primer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 140DB2531907328E007C772F /* Build configuration list for PBXNativeTarget "Reactive Cocoa Primer" */;
+			buildPhases = (
+				B769D64C09604EB99DC3F001 /* Check Pods Manifest.lock */,
+				140DB2231907328E007C772F /* Sources */,
+				140DB2241907328E007C772F /* Frameworks */,
+				140DB2251907328E007C772F /* Resources */,
+				732ABC1FAF664A2B8F125A51 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Reactive Cocoa Primer";
+			productName = "Reactive Cocoa Primer";
+			productReference = 140DB2271907328E007C772F /* Reactive Cocoa Primer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		140DB2411907328E007C772F /* Reactive Cocoa PrimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 140DB2561907328E007C772F /* Build configuration list for PBXNativeTarget "Reactive Cocoa PrimerTests" */;
+			buildPhases = (
+				140DB23E1907328E007C772F /* Sources */,
+				140DB23F1907328E007C772F /* Frameworks */,
+				140DB2401907328E007C772F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				140DB2481907328E007C772F /* PBXTargetDependency */,
+			);
+			name = "Reactive Cocoa PrimerTests";
+			productName = "Reactive Cocoa PrimerTests";
+			productReference = 140DB2421907328E007C772F /* Reactive Cocoa PrimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		140DB21F1907328E007C772F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = bryantjustin.com;
+				TargetAttributes = {
+					140DB2411907328E007C772F = {
+						TestTargetID = 140DB2261907328E007C772F;
+					};
+				};
+			};
+			buildConfigurationList = 140DB2221907328E007C772F /* Build configuration list for PBXProject "Reactive Cocoa Primer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 140DB21E1907328E007C772F;
+			productRefGroup = 140DB2281907328E007C772F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				140DB2261907328E007C772F /* Reactive Cocoa Primer */,
+				140DB2411907328E007C772F /* Reactive Cocoa PrimerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		140DB2251907328E007C772F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140DB2351907328E007C772F /* InfoPlist.strings in Resources */,
+				140DB23D1907328E007C772F /* Images.xcassets in Resources */,
+				140DB26A19075E61007C772F /* SuccessViewController.xib in Resources */,
+				140DB25F190736AC007C772F /* SignInViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		140DB2401907328E007C772F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		732ABC1FAF664A2B8F125A51 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B769D64C09604EB99DC3F001 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		140DB2231907328E007C772F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				140DB23B1907328E007C772F /* AppDelegate.m in Sources */,
+				140DB2371907328E007C772F /* main.m in Sources */,
+				140DB26919075E61007C772F /* SuccessViewController.m in Sources */,
+				140DB25E190736AC007C772F /* SignInViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		140DB23E1907328E007C772F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		140DB2481907328E007C772F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 140DB2261907328E007C772F /* Reactive Cocoa Primer */;
+			targetProxy = 140DB2471907328E007C772F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		140DB2331907328E007C772F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				140DB2341907328E007C772F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		140DB2511907328E007C772F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		140DB2521907328E007C772F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		140DB2541907328E007C772F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3581176053CB4715A9B04676 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Application/Reactive Cocoa Primer-Prefix.pch";
+				INFOPLIST_FILE = "Application/Reactive Cocoa Primer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		140DB2551907328E007C772F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3581176053CB4715A9B04676 /* Pods.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Application/Reactive Cocoa Primer-Prefix.pch";
+				INFOPLIST_FILE = "Application/Reactive Cocoa Primer-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		140DB2571907328E007C772F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Cocoa Primer.app/Reactive Cocoa Primer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Cocoa Primer/Reactive Cocoa Primer-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "Reactive Cocoa PrimerTests/Reactive Cocoa PrimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		140DB2581907328E007C772F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Reactive Cocoa Primer.app/Reactive Cocoa Primer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Reactive Cocoa Primer/Reactive Cocoa Primer-Prefix.pch";
+				INFOPLIST_FILE = "Reactive Cocoa PrimerTests/Reactive Cocoa PrimerTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		140DB2221907328E007C772F /* Build configuration list for PBXProject "Reactive Cocoa Primer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				140DB2511907328E007C772F /* Debug */,
+				140DB2521907328E007C772F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		140DB2531907328E007C772F /* Build configuration list for PBXNativeTarget "Reactive Cocoa Primer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				140DB2541907328E007C772F /* Debug */,
+				140DB2551907328E007C772F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		140DB2561907328E007C772F /* Build configuration list for PBXNativeTarget "Reactive Cocoa PrimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				140DB2571907328E007C772F /* Debug */,
+				140DB2581907328E007C772F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 140DB21F1907328E007C772F /* Project object */;
+}
