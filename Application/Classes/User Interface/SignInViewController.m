@@ -42,21 +42,87 @@
 {
     [super viewDidLoad];
     self.title = @"Sign In";
-    
-    [self updateFieldsWithCurrentTime];
-    timer = [NSTimer
-        scheduledTimerWithTimeInterval:1.
-        target:self
-        selector:@selector(onTimerInterval)
-        userInfo:nil
-        repeats:YES
+
+    RACSignal *dateComponentSignal = [[[RACSignal
+        interval:1.
+        onScheduler:RACScheduler.mainThreadScheduler
+                                       
+    ] startWith:[NSDate date]
+    ] map:^(NSDate *date)
+        {
+            NSCalendar *calendar = [NSCalendar currentCalendar];
+            return [calendar
+                    components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
+                    fromDate:date];
+        }
     ];
     
-    [self.submitButton
-        addTarget:self
-        action:@selector(didTapSubmitButton:)
-        forControlEvents:UIControlEventTouchUpInside
+    @weakify(self);
+    
+    RAC(self.hoursField, text) = [dateComponentSignal
+        map:^(NSDateComponents *components)
+        {
+            @strongify(self);
+            return [self formatTime:components.hour];
+        }
     ];
+    
+    RAC(self.minutesField, text) = [dateComponentSignal
+        map:^(NSDateComponents *components)
+        {
+            @strongify(self);
+            return [self formatTime:components.minute];
+        }
+    ];
+    
+    RAC(self.secondsField, text) = [dateComponentSignal
+        map:^(NSDateComponents *components)
+        {
+            @strongify(self);
+            return [self formatTime:components.second];
+        }
+    ];
+    
+    RACSignal *formValidSignal = [RACSignal
+        combineLatest:
+          @[
+            self.usernameField.rac_textSignal,
+            self.passwordField.rac_textSignal
+            ] reduce:^(NSString *username, NSString *password)
+                                  {
+                                      return @(username.length > 0 && password.length > 0);
+                                  }
+      ];
+    
+        RAC(self.submitButton, enabled) = formValidSignal;
+        RAC(self.submitButton, backgroundColor) = [formValidSignal
+            map:^(NSNumber *isValid)
+    {
+        return isValid.boolValue ? BUTTON_ENABLED_COLOR : BUTTON_DISABLED_COLOR;
+    }];
+    
+    [[self.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside ]
+        subscribeNext:^(UIButton *sender)
+         {
+                 @strongify(self);
+                 [self openSuccessView];
+         }
+    ];
+      
+//    [self updateFieldsWithCurrentTime];
+//    timer = [NSTimer
+//        scheduledTimerWithTimeInterval:1.
+//        target:self
+//        selector:@selector(onTimerInterval)
+//        userInfo:nil
+//        repeats:YES
+//    ];
+//    
+//    [self.submitButton
+//        addTarget:self
+//        action:@selector(didTapSubmitButton:)
+//        forControlEvents:UIControlEventTouchUpInside
+//    ];
 }
 
 /******************************************************************************/
@@ -65,17 +131,17 @@
 
 /******************************************************************************/
 
-- (BOOL)textField:(UITextField *)textField
-    shouldChangeCharactersInRange:(NSRange)range
-    replacementString:(NSString *)string
-{
-    BOOL isValid = self.isFormValid;
-    
-    self.submitButton.enabled = isValid;
-    [self.submitButton setBackgroundColor:(isValid ? BUTTON_ENABLED_COLOR : BUTTON_DISABLED_COLOR)];
-    
-    return YES;
-}
+//- (BOOL)textField:(UITextField *)textField
+//    shouldChangeCharactersInRange:(NSRange)range
+//    replacementString:(NSString *)string
+//{
+//    BOOL isValid = self.isFormValid;
+//    
+//    self.submitButton.enabled = isValid;
+//    [self.submitButton setBackgroundColor:(isValid ? BUTTON_ENABLED_COLOR : BUTTON_DISABLED_COLOR)];
+//    
+//    return YES;
+//}
 
 /******************************************************************************/
 
@@ -83,10 +149,10 @@
 
 /******************************************************************************/
 
-- (void)didTapSubmitButton:(id)sender
-{
-    [self openSuccessView];
-}
+//- (void)didTapSubmitButton:(id)sender
+//{
+//    [self openSuccessView];
+//}
 
 /******************************************************************************/
 
@@ -94,22 +160,22 @@
 
 /******************************************************************************/
 
-- (void)onTimerInterval
-{
-    [self updateFieldsWithCurrentTime];
-}
-
-- (void)updateFieldsWithCurrentTime
-{
-    NSCalendar *calendar =[NSCalendar currentCalendar];
-    NSDateComponents *dateComponents = [calendar
-        components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
-        fromDate:[NSDate date]
-    ];
-    self.hoursField.text    = [self formatTime:dateComponents.hour];
-    self.minutesField.text  = [self formatTime:dateComponents.minute];
-    self.secondsField.text  = [self formatTime:dateComponents.second];
-}
+//- (void)onTimerInterval
+//{
+//    [self updateFieldsWithCurrentTime];
+//}
+//
+//- (void)updateFieldsWithCurrentTime
+//{
+//    NSCalendar *calendar =[NSCalendar currentCalendar];
+//    NSDateComponents *dateComponents = [calendar
+//        components:(NSCalendarUnitHour | NSCalendarUnitMinute | NSCalendarUnitSecond)
+//        fromDate:[NSDate date]
+//    ];
+//    self.hoursField.text    = [self formatTime:dateComponents.hour];
+//    self.minutesField.text  = [self formatTime:dateComponents.minute];
+//    self.secondsField.text  = [self formatTime:dateComponents.second];
+//}
 
 - (NSString *)formatTime:(NSInteger)unit
 {
@@ -137,11 +203,11 @@
 #pragma mark - Form validation
 
 /******************************************************************************/
-
-- (BOOL)isFormValid
-{
-    return [self.usernameField.text length] > 0
-    && [self.passwordField.text length] > 0;
-}
+//
+//- (BOOL)isFormValid
+//{
+//    return [self.usernameField.text length] > 0
+//    && [self.passwordField.text length] > 0;
+//}
 
 @end
